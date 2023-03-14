@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const artistBresponse = await fetch("http://192.168.0.26:9090/artistB");
+const artistBdata = await artistBresponse.json();
+// import ArtistMap from "../../components/ArtistMap.svelte";
+// import ArtDis from "./artistDisplay.astro"
+---
+
+<Layout title="B">
+	<main class="m-auto p-6 max-w-3xl">
+		<h1 class="text-3xl text-blue-500">Artists B</h1>
+		<!-- <ArtistMap ArtID={artistBdata}/> -->
+		
+		<ul
+			class="grid xxsm:grid-cols-2 xsm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2 flex items-center"
+		>
+			{
+				artistBdata.map((d) => (
+					<button  id={d.artistid} class="min-w-fit text-white">
+						<a href="/artist/artistDisplay">{d.artist}</a>
+					</button>
+					
+				))
+			}
+		</ul>
+	</main>
+</Layout>

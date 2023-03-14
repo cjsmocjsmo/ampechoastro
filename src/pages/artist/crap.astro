@@ -1,0 +1,19 @@
+---
+
+import Layout from "../../layouts/Layout.astro";
+
+const { artistid } = Astro.props
+---
+
+<Layout title="ArtistDisplay">
+    <main class="m-auto p-6 max-w-3xl">
+        <p class="text-white">Fuck</p>
+        <p class="text-white">{artistid}</p>
+    </main>
+</Layout>
+
+<!-- <script>
+    let artidd = localStorage.getItem("artistid")
+    console.log(artidd)
+    
+</script> -->

@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const song2response = await fetch("http://192.168.0.26:9090/song2");
+const song2data = await song2response.json();
+import SongMap from "../../components/SongMap.svelte";
+---
+
+<Layout title="1">
+	<main class="m-auto p-6 max-w-3xl">
+		<h1 class="text-3xl text-blue-500">Artists 3</h1>
+		<SongMap SonID={song2data} />
+	</main>
+</Layout>

@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const album1response = await fetch("http://192.168.0.26:9090/album1");
+const album1data = await album1response.json();
+import AlbumMap from "../../components/AlbumMap.svelte";
+---
+
+<Layout title="2">
+	<main class="m-auto p-6 max-w-3xl">
+		<h1 class="text-3xl text-blue-500">Album 3</h1>
+		<AlbumMap AlbID={album1data} />
+	</main>
+</Layout>

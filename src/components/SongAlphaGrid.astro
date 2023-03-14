@@ -1,0 +1,15 @@
+---
+const response = await fetch("http://192.168.0.26:9090/songFirstLetter");
+const songdata = await response.json();
+---
+
+<ul
+	role="list"
+	class="grid xxsm:grid-cols-3 xsm:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-2 flex items-center"
+>
+	{
+		songdata.map((d) => (
+		<a href={d.firstletterpath} id={d.firstletterid} class="text-violet-500">{d.firstletter}</a>
+		))
+    }
+</ul>

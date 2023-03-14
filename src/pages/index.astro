@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ArtistAlpha from "../components/ArtistAlphaGrid.astro";
+import AlbumAlpha from "../components/AlbumAlphaGrid.astro";
+import SongAlpha from "../components/SongAlphaGrid.astro";
+---
+
+<Layout title="Music">
+	<main class="m-auto p-6 max-w-3xl">
+
+		<h1 class="m-7 text-5xl text-white">Artists</h1>
+		<ArtistAlpha />
+
+		<h1 class="m-7 text-5xl text-white">Albums</h1>
+		<AlbumAlpha />
+
+		<h1 class="m-7 text-5xl text-white">Songs</h1>
+		<SongAlpha />
+
+	</main>
+</Layout>
